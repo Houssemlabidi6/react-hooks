@@ -1,6 +1,5 @@
 // App.js
 import React, { useState } from "react";
-import { Switch } from "react-router-dom";
 import { Route, BrowserRouter as Router } from "react-router-dom";
 import MovieList from "./components/MovieList";
 import Filter from "./components/Filter";
@@ -77,7 +76,7 @@ const App = () => {
     <Router>
       <div className="app">
         <Navbar />
-        <Switch>
+        <routes>
           <Route exact path="/">
             <React.Fragment>
               <h1>Movie List</h1>
@@ -137,7 +136,7 @@ const App = () => {
           <Route path="/description/:id">
             <MoviePage movies={movies} />
           </Route>
-        </Switch>
+        </routes>
       </div>
     </Router>
   );
